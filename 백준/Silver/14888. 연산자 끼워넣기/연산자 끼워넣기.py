@@ -10,11 +10,11 @@ def DFS(depth, total, pl, mi, mu, di):
     if pl:
         DFS(depth + 1, total + num[depth], pl - 1, mi, mu, di)
     if mi:
-        DFS(depth+1, total-num[depth], pl, mi-1, mu, di)
+        DFS(depth + 1, total - num[depth], pl, mi-1, mu, di)
     if mu:
-        DFS(depth+1, total*num[depth], pl, mi, mu-1, di)
+        DFS(depth + 1, total * num[depth], pl, mi, mu-1, di)
     if di:
-        DFS(depth+1, int(total/num[depth]), pl, mi, mu, di-1)
+        DFS(depth + 1, int(total/num[depth]), pl, mi, mu, di-1)
 
 
 n = int(input())
