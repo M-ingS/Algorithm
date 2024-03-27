@@ -2,13 +2,10 @@ n = int(input())
 
 dp = [0] * (n+1)
 dp[1] = 1
-if n > 1:
-    dp[2] = 1
 
-for i in range(3, n+1):
+for i in range(2, n+1):
     dp[i] = dp[i-1] + dp[i-2]   # 마지막자리가 0일 경우, n-1자리는 어떤 이친수도 가능
                         # 마지막 자리가 1일 경우, 그 앞자리는 무조건 0, n-2자리는 어떤 이친수도 가능
-
 print(dp[n])
 
 # n=1 -> 1
