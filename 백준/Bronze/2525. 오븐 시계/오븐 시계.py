@@ -9,6 +9,6 @@ if M >= 60:
     M -= 60
 
 if H >= 24:
-    print(H-24, M, end=' ')
-else:
-    print(H, M, end=' ')
+    H -= 24
+    
+print(H, M, end=' ')
